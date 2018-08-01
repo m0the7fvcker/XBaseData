@@ -5,7 +5,7 @@
 //  Created by Poly.ma on 2018/7/25.
 //
 
-import TBaseStorageSwift
+import XBaseStorage
 
 public class TUserCacheManager: AbstractMemoryCacheManager {
     

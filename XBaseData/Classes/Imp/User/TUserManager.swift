@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import TBaseStorageSwift
+import XBaseStorage
 
 class TUserManager {
     
