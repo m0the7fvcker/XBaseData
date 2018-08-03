@@ -1,13 +1,13 @@
 //
-//  TUserMigrator.swift
-//  TBaseDataSwift
+//  UserMigrator.swift
+//  BaseDataSwift
 //
 //  Created by Poly.ma on 2018/7/25.
 //
 
 import RealmSwift
 
-public class TUserMigrator: NSObject {
+public class UserMigrator: NSObject {
     
     public class func startMigrateIfNeeded() {
         

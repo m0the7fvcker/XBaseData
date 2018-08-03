@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import XMidware
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: TetrisAppDelegate {
 
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        XMidware.start()
+        
+        let _ = super.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         return true
     }
 

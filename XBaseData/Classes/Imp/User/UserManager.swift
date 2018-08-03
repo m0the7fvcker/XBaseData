@@ -1,6 +1,6 @@
 //
-//  TUserManager.swift
-//  TBaseDataSwift
+//  UserManager.swift
+//  BaseDataSwift
 //
 //  Created by Poly.ma on 2018/7/25.
 //
@@ -8,16 +8,19 @@
 import UIKit
 import XBaseStorage
 
-class TUserManager {
+class UserManager {
     
     var databaseMgr = DatabaseManager.default
     
-    func fetchUserDataFromDatabase() -> TUserModel? {
+    func fetchUserDataFromDatabase() -> UserModel? {
     
-        return databaseMgr.selectObject(ofType: TUserModel.self, forPromaryKey: SandBoxUtil.shared.getDataFromUserDefault(forKey: TCurrentUserKey)!)
+        guard let userKey = SandBoxUtil.shared.getDataFromUserDefault(forKey: CurrentUserKey) else {
+            return nil
+        }
+        return databaseMgr.selectObject(ofType: UserModel.self, forPromaryKey: userKey)
     }
     
-    func syncUserInfoInDatabase(userInfo: TUserModel) {
+    func syncUserInfoInDatabase(userInfo: UserModel) {
         
         databaseMgr.beginOperation { (handler) in
             do {

@@ -34,4 +34,5 @@ TODO: Add long description of the pod here.
   
   s.dependency 'RealmSwift'
   s.dependency 'XBaseStorage'
+  s.dependency 'XMidware'
 end

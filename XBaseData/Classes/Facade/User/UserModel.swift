@@ -1,6 +1,6 @@
 //
-//  TUserModel.swift
-//  TBaseDataSwift
+//  UserModel.swift
+//  BaseDataSwift
 //
 //  Created by Poly.ma on 2018/7/25.
 //
@@ -12,7 +12,7 @@ fileprivate let AdminRoleCode: String = "001001006000000001"       // 管理者�
 fileprivate let UserInfoPath : String = "/DecorationUserInfoCache"
 fileprivate let CustomerServiceRoleCode = "001001006000000005"
 
-public class TUserModel: Object {
+public class UserModel: Object {
     
     @objc dynamic public var isAdmin: Bool = false // 是否是管理者用户
     @objc dynamic public var token: String?
